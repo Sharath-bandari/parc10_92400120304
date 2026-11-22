@@ -1,0 +1,20 @@
+
+using System.ComponentModel.DataAnnotations;
+
+namespace StudentManagementApi.Models;
+
+public class Student
+{
+    public int Id { get; set; }
+
+    [Required]
+    [StringLength(100)]
+    public string Name { get; set; } = string.Empty;
+
+    [Required]
+    [EmailAddress]
+    public string Email { get; set; } = string.Empty;
+
+    [Required]
+    public string Major { get; set; } = string.Empty;
+}
